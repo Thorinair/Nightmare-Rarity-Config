@@ -1,5 +1,8 @@
 # Nightmare Rarity Config
+
 This repository hosts the newest version of configuration files and any other customized files for Thorinair's [Nightmare Rarity](https://www.thingiverse.com/thorinair/collections/nightmare-rarity) 3D printer. Specifically, the files are designed for integration with the [Marlin Firmware](https://github.com/MarlinFirmware/Marlin).
+
+![alt text](http://mc.celestek.xyz/nmr.png "Nightmare Rarity Logo")
 
 The purpose of this repository is so others can inspect my configuration more easily, and so I have a backup of the files somewhere.
 
