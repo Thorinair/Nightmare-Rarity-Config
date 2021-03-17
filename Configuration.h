@@ -540,9 +540,22 @@
   //   40W Precision Heater
   //   210 C
   //   0% Fan
-  #define DEFAULT_Kp 29.16
-  #define DEFAULT_Ki 3.13
-  #define DEFAULT_Kd 67.98
+  //#define DEFAULT_Kp 29.16
+  //#define DEFAULT_Ki 3.13
+  //#define DEFAULT_Kd 67.98
+
+  // M303 E0 S210 C16
+  // Nightmare Rarity: 
+  //   BTT SKR 1.4 Turbo
+  //   E3D Hemera
+  //   40W Precision Heater
+  //   Nozzle X - 0.4 mm
+  //   210 C
+  //   0% Fan
+  //   Bed: ON (50 C)
+  #define DEFAULT_Kp 20.16
+  #define DEFAULT_Ki 1.54
+  #define DEFAULT_Kd 65.82
 
 #endif // PIDTEMP
 
@@ -1023,7 +1036,7 @@
  *
  * Specify a Probe position as { X, Y, Z }
  */
-#define NOZZLE_TO_PROBE_OFFSET { 0, 50, -2.10 }
+#define NOZZLE_TO_PROBE_OFFSET { 0, 50, -2.05 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
