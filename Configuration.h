@@ -553,9 +553,22 @@
   //   210 C
   //   0% Fan
   //   Bed: ON (50 C)
-  #define DEFAULT_Kp 20.16
-  #define DEFAULT_Ki 1.54
-  #define DEFAULT_Kd 65.82
+  //#define DEFAULT_Kp 20.16
+  //#define DEFAULT_Ki 1.54
+  //#define DEFAULT_Kd 65.82
+
+  // M303 E0 S220 C16
+  // Nightmare Rarity: 
+  //   BTT SKR 1.4 Turbo
+  //   E3D Hemera
+  //   40W Precision Heater
+  //   Nozzle X - 0.4 mm
+  //   220 C
+  //   0% Fan
+  //   Bed: ON (50 C)
+  #define DEFAULT_Kp 21.25
+  #define DEFAULT_Ki 1.63
+  #define DEFAULT_Kd 69.10
 
 #endif // PIDTEMP
 
@@ -829,7 +842,7 @@
  * Override with M201
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_ACCELERATION      { 9000, 9000, 100, 400 }
+#define DEFAULT_MAX_ACCELERATION      { 3200, 3200, 100, 8000 }
 
 //#define LIMITED_MAX_ACCEL_EDITING     // Limit edit via M201 or LCD to DEFAULT_MAX_ACCELERATION * 2
 #if ENABLED(LIMITED_MAX_ACCEL_EDITING)
@@ -844,9 +857,9 @@
  *   M204 R    Retract Acceleration
  *   M204 T    Travel Acceleration
  */
-#define DEFAULT_ACCELERATION          800     // X, Y, Z and E acceleration for printing moves
-#define DEFAULT_RETRACT_ACCELERATION  400     // E acceleration for retracts
-#define DEFAULT_TRAVEL_ACCELERATION   1600    // X, Y, Z acceleration for travel (non printing) moves
+#define DEFAULT_ACCELERATION          8000   // X, Y, Z and E acceleration for printing moves
+#define DEFAULT_RETRACT_ACCELERATION  8000   // E acceleration for retracts
+#define DEFAULT_TRAVEL_ACCELERATION   3200    // X, Y, Z acceleration for travel (non printing) moves
 
 /**
  * Default Jerk limits (mm/s)
@@ -870,7 +883,7 @@
   #endif
 #endif
 
-#define DEFAULT_EJERK    2.5  // May be used by Linear Advance
+#define DEFAULT_EJERK 60  // May be used by Linear Advance
 
 /**
  * Junction Deviation Factor
@@ -1036,7 +1049,7 @@
  *
  * Specify a Probe position as { X, Y, Z }
  */
-#define NOZZLE_TO_PROBE_OFFSET { 0, 50, -2.05 }
+#define NOZZLE_TO_PROBE_OFFSET { 0, 50, -2.00 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
